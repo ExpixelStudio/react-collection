@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 
 import data from "./data";
 import './style.css';
@@ -7,23 +8,52 @@ export default function Accordion(){
 
     const  [selected, setSelected] = useState(null); //stores selected item ID for single selection.
     const [enableMultiSelect, setEnableMultiSelect] = useState(false); //enable or disable multi selection.
-    const [multiple, setMultiple] = useState([]); // stores multiple IDs for multi selection.
+    const [multipleId, setMultipleId] = useState([]); // stores multipleId IDs for multi selection.
 
     function handleSingleSelection(getCurrentId){
         //console.log(getCurrentId);
         setSelected(getCurrentId === selected ? null : getCurrentId); //closes component if already open
     }
 
+    function handleMultiSelection(getCurrentId){
+        
+        setMultipleId( tempMultipleId => {
+            if (tempMultipleId.includes(getCurrentId)) {
+                // If ID is already in the array, remove it (deselect)
+                return tempMultipleId.filter(id => id !== getCurrentId);
+            } else {
+                // If ID is not in the array, add it (select)
+                return [...tempMultipleId, getCurrentId];
+            }
+        });
+        
+        console.log({multipleId});
+        
+    }
+
+    useEffect(() => {
+        //code we want to run
+        console.log(multipleId);
+    } ,[multipleId]); //dependancy array
+
     console.log(selected);
     return (
         <div className="wrapper">
-            <button>Enable Multi-Selection</button>
+
+            <button onClick={() => setEnableMultiSelect(!enableMultiSelect)}> { !enableMultiSelect 
+                                                                                ? 'Enable Multi Selection' 
+                                                                                : 'Disable Multi Selection'}</button> {/* !enableMulti toggles state to whatever it currently is not */}
+
             <div className="accordion">
                 {
                     data && data.length > 0 ? (
                     data.map((dataItem) => (
-                        <div className="item">
-                            <div onClick={() => handleSingleSelection(dataItem.id)} className="title">
+                        <div className="item" key={dataItem.id}>
+                            <div className="title" onClick={ 
+                                enableMultiSelect 
+                                ? () => handleMultiSelection(dataItem.id) 
+                                : () => handleSingleSelection(dataItem.id)} 
+                            >
                                 <h3>{dataItem.question}</h3>
                                 <span>+</span>
                             </div>
