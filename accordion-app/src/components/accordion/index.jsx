@@ -17,7 +17,7 @@ export default function Accordion(){
 
     function handleMultiSelection(getCurrentId){
         
-        setMultipleId( tempMultipleId => {
+        setMultipleId( tempMultipleId => { //tempMID holds current ID(s) until updated with new current ID
             if (tempMultipleId.includes(getCurrentId)) {
                 // If ID is already in the array, remove it (deselect)
                 return tempMultipleId.filter(id => id !== getCurrentId);
@@ -33,6 +33,7 @@ export default function Accordion(){
 
     useEffect(() => {
         //code we want to run
+        setMultipleId(multipleId);  
         console.log(multipleId);
     } ,[multipleId]); //dependancy array
 
@@ -58,10 +59,16 @@ export default function Accordion(){
                                 <span>+</span>
                             </div>
                             {
-                                selected === dataItem.id ? 
-                                <div className="content">{dataItem.answer}</div>
-                                : null
-                                
+                                // Render content for single selection mode
+                                !enableMultiSelect && selected === dataItem.id ? (
+                                    <div className="content">{dataItem.answer}</div>
+                                ) : null
+                            }
+                            {
+                                // Render content for multi-selection mode
+                                enableMultiSelect && multipleId.includes(dataItem.id) ? (
+                                    <div className="content">{dataItem.answer}</div>
+                                ) : null
                             }
                             
                         </div> 
@@ -76,3 +83,14 @@ export default function Accordion(){
         
     );
 };
+
+/* {   
+    enableMultiSelect ? multipleId.indexOf(dataItem.id) !== -1 &&(
+        <div className="content">{dataItem.answer}</div>
+    )
+    :
+    selected === dataItem.id && (
+    <div className="content">{dataItem.answer}</div>
+    )
+    
+} */
