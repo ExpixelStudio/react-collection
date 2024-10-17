@@ -1,0 +1,11 @@
+.star:hover {
+    color: #fff700;  
+}
+
+.active {
+    color: #fff700;
+}
+
+.inactive {
+    color:black;
+}
