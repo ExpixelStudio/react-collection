@@ -42,6 +42,13 @@ export default function StarRating({noOfStars = 6}){ //if no value is passed, de
                     );
                 })
             }
+
+        <div className="display">
+            <h3>{`You Rated it ${rating} out of ${noOfStars} stars.`}</h3>
         </div>
+
+        </div>
+
+        
     )
 }
