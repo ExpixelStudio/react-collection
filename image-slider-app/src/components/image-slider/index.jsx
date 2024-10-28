@@ -10,7 +10,7 @@ export default function ImageSlider({url, limit = 5, page = 1}) {
     const [errorMsg, setErrorMsg] = useState(null);
     const [loading, setLoading] = useState(false); //when handling api calls always check loading state
     const [autoScroll, setAutoScroll] = useState(false); // auto scroll off by default
-    /const [intervalId, setIntervalId] = useState(null); // Store interval ID for auto scroll
+    //const [intervalId, setIntervalId] = useState(null); // Store interval ID for auto scroll
     const intervalIdRef = useRef(null); //store interval ID
 
     async function fetchImages(getUrl){
