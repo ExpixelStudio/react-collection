@@ -11,10 +11,17 @@ export default function LoadMoreData(){
             const response = await fetch(`https://dummyjson.com/products?limit=20&skip=${count === 0 ? 0 : count * 20}`)
             
             const result = await response.json();
+
+            if(result && result.products && result.products.length){
+                setProducts(result.products);
+                setLoading(false);
+                
+            }
             console.log(result);
             
         } catch(e) {
             console.log(e);
+            setLoading(false);
         }
     }
 
@@ -22,8 +29,26 @@ export default function LoadMoreData(){
         fetchProducts()
     },[]);
 
+    if(loading){
+        return <div className="Loading  data, Please wait."></div>
+    }
+
     return (
         <div className="container">
+            <div className= 'product-container'>
+                {
+                    products && products.length ?
+                    products.map(item => <div className='product' key={item.id}>
+                        <img src="item.thumbnail" alt={item.title} />
+                        <p>{item.title}</p>
+                    </div>)
+                    :null
+                }
+            </div>
+
+            <div className="button-container">
+                <button>Load More Products</button>
+            </div>
 
         </div>
     )
