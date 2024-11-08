@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       {/* load more data component */}
-      <LoadMoreData />
+      <LoadMoreData productLimit= {100}/>
     </>
   )
 }

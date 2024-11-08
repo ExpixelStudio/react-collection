@@ -2,12 +2,13 @@ import './style.css';
 import { useState, useEffect, useRef } from "react"
 
 
-export default function LoadMoreData(){
+export default function LoadMoreData({productLimit = 100}){
 
     const [loading, setLoading] = useState(false);
     const [products, setProducts] = useState([]);
     const [count, setCount] = useState(0);
-    
+    const [disableButton, setDisableButton] = useState(false);
+
     // Ref to track if the initial fetch has already occurred
     const initialFetch = useRef(true); //future proof double fetch prevention, even tho only happens in dev with strictmode otherwise.
 
@@ -46,8 +47,15 @@ export default function LoadMoreData(){
             fetchProducts();
         } else if (count > 0) {
             fetchProducts();
+            console.log(products.length+20);
         }
     }, [count]);
+
+    useEffect(()=> {
+        if (products && products.length >= productLimit ){
+            setDisableButton(true);
+        }
+    }),[products];
 
     if(initialFetch.current){ // only shows this msg on first load , to prevent display distuption when loading more
         console.log({loading});
@@ -68,9 +76,14 @@ export default function LoadMoreData(){
             </div>
 
             <div className="button-container">
-                <button onClick={() => setCount(count + 1)}>Load More Products</button>
+                <button disabled={disableButton} onClick={() => setCount(count + 1)}>
+                    Load More Products
+                </button>
+                {
+                    disableButton ? <p>You have reached the limit of {productLimit} products</p> : null
+                }
             </div>
 
-        </div>
+        </div> 
     )
 }
