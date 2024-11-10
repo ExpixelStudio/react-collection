@@ -1,4 +1,5 @@
-import MenuItem from "./MenuItem"
+import MenuItem from "./MenuItem";
+import './style.css';
 
 export default function MenuList({list = []}){
     return (

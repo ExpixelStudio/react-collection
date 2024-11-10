@@ -16,13 +16,13 @@ export default function MenuItem({item}){
 
     console.log(displayCurrentChild);
     return (
-        <li className="menu-item-container">
-            <div>
+        <li>
+            <div className="menu-item">
                 <p>{item.label}</p>
                 {
                     item && item.children && item.children.length ? <span onClick={()=>handleToggleChildren(item.label)}>
                     {
-                        displayCurrentChild[item.label] ? <FaMinus/> : <FaPlus/>
+                        displayCurrentChild[item.label] ? <FaMinus color="#fff" size={25}/> : <FaPlus color="#fff" size={25}/>
                     }
                     </span> :null 
                 }
