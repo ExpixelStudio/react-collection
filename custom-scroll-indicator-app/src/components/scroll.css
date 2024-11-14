@@ -1,0 +1,29 @@
+.top-container{
+   display: flex;
+   flex-direction: column;
+   position:sticky;
+   top: 0;
+   z-index: 1;
+   width: 100%;
+   text-align: center;
+   background-color: black;
+   color: #fff;
+   height: auto;
+}
+
+.top-container h1{
+   padding: 30px;
+}
+
+.scroll-progress-tracking-container{
+   width: 100%;
+   height: 10px;
+   background: forestgreen;
+}
+
+.current-progress-bar{
+   height: 10px;
+   background: purple;
+   width: 0%;
+}
+
