@@ -1,7 +1,7 @@
 import ScrollIndicator from "./components"
-import './App.css'
+/* import './App.css' */
 
-function App() {
+function App() {/*  */
  
 
   return (
