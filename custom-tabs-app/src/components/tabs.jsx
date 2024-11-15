@@ -23,11 +23,10 @@ export default function Tabs({tabsContent, onChange}){
 
          </div>
 
-         <div className="content">
-            {
-               tabsContent[currentTabIndex] && tabsContent[currentTabIndex].content
-            }
-
+         <div className="content" style={{color:'red'}}>
+            
+            <h2>{tabsContent[currentTabIndex] && tabsContent[currentTabIndex].content}</h2>
+         
          </div>
 
       </div>
