@@ -14,10 +14,10 @@ export default function UserCard({ user }) {
   return (
     <div className="user">
       <div>
-        <img src={avatar_url} className="avatar" alt="profile avatar" />
+         <a href={`https://github.com/${login}`}><img src={avatar_url} className="avatar" alt="profile avatar" /></a>
       </div>
 
-      <div>
+      <div className="name-container">
         <a href={`https://github.com/${login}`}>{login || name}</a>
         <p>
           User joined on{" "}
@@ -27,17 +27,18 @@ export default function UserCard({ user }) {
         </p>
       </div>
 
-      <div>
+      <div className="profile-info">
          <div>
-            <p>Public Repos</p>
+            <h4>Public Repos</h4>
             <p>{public_repos}</p>
          </div>
          <div>
-            <p>Followers</p>
+            <h4>Followers</h4>
             <p>{followers}</p>
          </div>
          <div>
-            <p></p>
+            <h4>Following</h4>
+            <p>{following}</p>
          </div>
       </div>
     </div>
