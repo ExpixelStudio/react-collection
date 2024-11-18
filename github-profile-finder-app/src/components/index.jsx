@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import UserCard from "./UserCard";
+import './style.css';
 
 
 export default function GithubProfileFinder(){
