@@ -1,4 +1,4 @@
-
+import UseFetchHookTest from './components/UseFetch/test'
 import './App.css'
 
 function App() {
@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      
+      <UseFetchHookTest />
     </>
   )
 }
