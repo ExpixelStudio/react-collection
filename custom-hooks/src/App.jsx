@@ -2,6 +2,7 @@ import UseFetchHookTest from './components/UseFetch/test'
 import OnClickOutideTest from './components/OnClickOutside/test'
 import './App.css'
 import UseWindowResizeTest from './components/UseWindowResize/test'
+import ScrollToTopAndBottom from './components/ScrollToTopAndBottom'
 
 function App() {
   
@@ -15,7 +16,10 @@ function App() {
       {/* <OnClickOutideTest /> */}
 
       {/* Use window resize hook UseFetchHookTest */}
-      <UseWindowResizeTest />
+      {/* <UseWindowResizeTest /> */}
+
+      {/* Scroll to Top and Bottom Hook */}
+      <ScrollToTopAndBottom />
 
     </>
   )
