@@ -1,6 +1,7 @@
 import UseFetchHookTest from './components/UseFetch/test'
 import OnClickOutideTest from './components/OnClickOutside/test'
 import './App.css'
+import UseWindowResizeTest from './components/UseWindowResize/test'
 
 function App() {
   
@@ -11,7 +12,11 @@ function App() {
       {/* <UseFetchHookTest /> */}
 
       {/* Use on click outside hook test */}
-      <OnClickOutideTest />
+      {/* <OnClickOutideTest /> */}
+
+      {/* Use window resize hook UseFetchHookTest */}
+      <UseWindowResizeTest />
+
     </>
   )
 }
