@@ -3,6 +3,7 @@ import OnClickOutideTest from './components/OnClickOutside/test'
 import './App.css'
 import UseWindowResizeTest from './components/UseWindowResize/test'
 import ScrollToTopAndBottom from './components/ScrollToTopAndBottom'
+import ScrollToSection from './components/ScrollToTopAndBottom/ScrollToSection'
 
 function App() {
   
@@ -19,7 +20,10 @@ function App() {
       {/* <UseWindowResizeTest /> */}
 
       {/* Scroll to Top and Bottom Hook */}
-      <ScrollToTopAndBottom />
+      {/* <ScrollToTopAndBottom /> */}
+
+      {/* Scroll to particular section */}
+      <ScrollToSection />
 
     </>
   )
