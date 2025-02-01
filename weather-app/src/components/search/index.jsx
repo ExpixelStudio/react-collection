@@ -1,13 +1,7 @@
 import { useState } from "react"
 
 
-export default function Search(){
-
-   const [search, setSearch] = useState('');
-
-   function handleSearch(){
-      return;
-   }
+export default function Search({search, setSearch, handleSearch}){
 
    return(  
       <div className="search-engine">
@@ -19,7 +13,7 @@ export default function Search(){
          onChange={(event)=> setSearch(event.target.value)} />
 
          <button onClick={handleSearch}>
-            Search Weather
+            Search
          </button>
       </div>
    );

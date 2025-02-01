@@ -5,7 +5,7 @@ import Weather from './components/weather'
 function App() {
 
   return (
-    <div className='app'>
+    <div className='App'>
       <Weather />
        
     </div>

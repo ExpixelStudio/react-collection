@@ -5,6 +5,17 @@
   /* text-align: center; */
 }
 
+.App{
+  text-align: center;
+  margin: 50px auto 0;
+  width: 90%;
+  max-width: 700px;
+  border-radius: 20px;
+  height: 470px;
+  padding: 20px 15px;
+  background: rgb(4, 202, 169);
+}
+
 .search-engine {
   width:100%;
   display: flex;
@@ -34,7 +45,55 @@
   font-size:20px;
   outline: none;
   cursor: pointer;
-  padding: 12px 15px;
+  padding: 13px 15px;
 }
 
+.city-name{
+  margin-bottom: 10px;
+
+}
+
+.loading{
+  font-size: 60px;
+  font-weight: bolder;
+  color: black;
+}
+
+.date{
+  font-size: 18px;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.temperature{
+  font-size: 64px;
+  color: blac;
+  font-weight: bold;
+  text-align: center;
+}
+
+.description {
+  color: black;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+
+.weather-info{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+  padding: 0px 20px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.column{
+  display:flex;
+  align-items: center;
+  line-height: 1px;
+}
 
