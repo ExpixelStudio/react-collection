@@ -7,6 +7,7 @@ export default function Weather(){
    const [search, setSearch] = useState('');
    const [loading, setLoading]= useState('false');
    const [weatherData, setWeatherData] = useState(null);
+   const apiKey = import.meta.env.VITE_API_KEY; //user/tester must use their own API key
 
    async function fetchWeatherData(param){
       setLoading(true);
@@ -14,7 +15,7 @@ export default function Weather(){
       try{
 
          const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=`); //temporary remove key for commit
+            `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=${apiKey}`); 
 
          const data = await response.json();
          console.log(data, 'data');
