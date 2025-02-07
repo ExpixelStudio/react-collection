@@ -11,9 +11,10 @@ export default function RecipeItem({item}){
          <div>
             <span className="text-sm text-cyan-600 font-medium">{item?.publisher}</span>
          </div>
-         <h3 className="font-bold text-2x1 truncate text-orange-450">{item?.title}</h3>
+         <h3 className="font-bold text-2x1 truncate text-gray-700">{item?.title}</h3>
+         
          <Link to ={`/recipe-item/${item?.id}`}
-         className="text-sm text-center p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-white"
+         className="text-sm text-center p-3 mt-5 px-8 rounded-lg uppercase font-medium tracking-wider inline-block shadow-md bg-black text-amber-300"
          >Recipe Details </Link>
          </div>
    )

@@ -13,7 +13,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/favourites" element={<Favourites />} />
-          <Route path="/details/:id" element={<Details />} /> {/* /:id dynamic page */}
+          <Route path="/recipe-item/:id" element={<Details />} /> {/* /:id dynamic page */}
   
         </Routes>
       </div>
