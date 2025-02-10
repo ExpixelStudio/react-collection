@@ -6,7 +6,7 @@ import { GlobalContext } from "../../context";
 export default function Details(){
 
    const {id} = useParams();
-   const {recipeDetailsData, setRecipeDetailsData} = useContext(GlobalContext);
+   const {recipeDetailsData, setRecipeDetailsData, handleAddToFavourites, favouritesList} = useContext(GlobalContext);
 
    console.log({id});
 
@@ -16,6 +16,7 @@ export default function Details(){
          const data = await response.json();
 
          console.log(data);
+         
 
          if(data?.data){
             setRecipeDetailsData(data?.data)
@@ -23,9 +24,10 @@ export default function Details(){
       }
 
       getRecipeDetails();
+      console.log('api called');
    },[]);
 
-   console.log(recipeDetailsData);
+   console.log({recipeDetailsData});
 
 
    return (
@@ -42,23 +44,24 @@ export default function Details(){
             <span className="text-sm text-cyan-600 font-medium">{recipeDetailsData?.recipe?.publisher}</span>
             <h3 className="font-bold text-2x1 text-wrap text-gray-700">{recipeDetailsData?.recipe?.title}</h3>
             <div>
-               <button className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block shadow-md bg-black text-pink-300">
-                  Save to Favourites
+               <button onClick={()=> handleAddToFavourites(recipeDetailsData?.recipe)} className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block shadow-md bg-black text-cyan-400">
+                 {
+                  favouritesList &&  favouritesList.length > 0 && favouritesList.findIndex(item=> item.id === recipeDetailsData?.recipe?.id) !== -1 ? 'Remove from Favourites' : 'Save to Favourites'
+                 }
                </button>
             </div>
             <div>
                <span className="text-2x1 font-semibold text-black">Ingredients:</span>
                <ul className="flex flex-col gap-3">
                   {
-                     recipeDetailsData?.recipe?.ingredients.map((ingredient) => 
+                     recipeDetailsData?.recipe?.ingredients.map((ingredient) => (
                      <li>
-                        <span className="text-2x1 font-semibold text-black">
-                           {ingredient.quantity}
-                           {ingredient.unit}
+                        <span className="text-lg font-semibold text-orange-600">
+                           {ingredient.quantity}<span className="text-orange-800">{ingredient.unit}</span>
                         </span>
-                        <span className="text-2x1 font-semibold text-black">{ingredient.description}</span>
+                        <span className="text-lg font-semibold text-purple-950"> {ingredient.description}</span>
                      </li>
-                     ) 
+                     )) 
                   }
 
                </ul>
