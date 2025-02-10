@@ -16,8 +16,8 @@ https://forkify-api.herokuapp.com/v2
 Things learned or personally implemented for the first time during this project.
 
 Tailwind Css (Using Vite)   
-npm install tailwindcss @tailwindcss/vite
-https://tailwindcss.com/docs/installation/using-vite
+npm install tailwindcss @tailwindcss/vite 
+[ https://tailwindcss.com/docs/installation/using-vite ]
 
 # Recap Refrences  
 - API handling
@@ -32,7 +32,7 @@ https://tailwindcss.com/docs/installation/using-vite
 - Use Context
   - GlobalContext
   - https://react.dev/reference/react/useContex
--Tailwind Css
+- Tailwind Css
 
   
 
