@@ -23,9 +23,13 @@ export default function Details(){
          }
       }
 
-      getRecipeDetails();
-      console.log('api called');
-   },[]);
+      
+      if(id) {
+         getRecipeDetails();
+         console.log("API called for ID:", id);
+      }
+      
+   },[id]);
 
    console.log({recipeDetailsData});
 
