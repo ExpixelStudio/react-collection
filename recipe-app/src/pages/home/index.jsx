@@ -16,7 +16,7 @@ export default function Home(){
             recipeList && recipeList.length > 0 
             ? recipeList.map((item)=> <RecipeItem item={item} /> )
             : <div>
-               <p className="lg:text-4x1 text-xl text-center text-black font-extrabold">
+               <p className="lg:text-4xl text-xl text-center text-black font-extrabold">
                   Try searching the type of recipe or an ingredient.</p>
             </div>
          } 

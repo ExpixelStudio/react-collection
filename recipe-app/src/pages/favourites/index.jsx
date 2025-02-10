@@ -11,7 +11,7 @@ export default function Favourites(){
             favouritesList && favouritesList.length > 0 
             ? favouritesList.map((item)=> <RecipeItem item={item} /> )
             : <div>
-               <p className="lg:text-4x1 text-xl text-center text-black font-extrabold">
+               <p className="lg:text-4xl text-xl text-center text-black font-extrabold">
                   No recipes saved to favourites at the moment.
                </p>
             </div>
