@@ -1,17 +1,11 @@
-# Dependancies
+# Packages/Dependancies
 **This is just for documentation and review purposes of what i installed for future use/refrence.**
 
+**Environmental Variables**   
 npm install dotenv
 
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
+# APIs Used
+https://openweathermap.org/current
 
 # Learned
 Things learned or personally implemented for the first time during this project.
@@ -34,9 +28,24 @@ In React, environment variables should be prefixed with REACT_APP_ for Create Re
   - {import.meta.env.VITE_API_KEY} (Can be assigned to a variable).
   - const apiKey = import.meta.env.VITE_API_KEY;
 
-* Create React App (CRA) Environment:
+* Create React App (CRA) Environment: **[CRA DEPRECATED] no longer recommended to use**
   - console.log("API URL:", process.env.REACT_APP_API_URL);
   - {process.env.REACT_APP_API_URL} (Can be assigned to a variable).
   - cont apiKey = process.env.REACT_APP_API_URL;
 
 ***Remember to add '.env' to .gitignore to prevent pushing to github.***
+
+# Recap Refrences  
+- API handling
+- Environmental Variables
+  - .env file
+- ...
+
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
