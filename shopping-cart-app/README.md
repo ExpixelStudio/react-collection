@@ -10,22 +10,31 @@ npm install @reduxjs/toolkit
 react-redux react-icons react-router-dom ldrs(loaders)https://uiball.com/ldrs/<!--react-loader-spinner(not yet supported by react 19)-->
 
 **React Router Dom**   
-
-
-
 <!-- npm install react-router-dom 
-
 
 **Tailwind Css (Using Vite)**   
 npm install tailwindcss @tailwindcss/vite -->
 
 
 # APIs Used
+https://fakestoreapi.com/
 <!-- https://forkify-api.herokuapp.com/v2 -->
 
 
 # Learned
 Things learned or personally implemented for the first time during this project.
+
+Redux
+- Folder structure
+- store 
+  - index.js
+- slices
+  - cart-slice.js
+    - //createslice
+      //intialize initial state
+      //slice -> name,maintain initial state, actions
+   - import {createSlice} from '@reduxjs/toolkit';
+
 
 <!-- Tailwind Css (Using Vite)   
 npm install tailwindcss @tailwindcss/vite
