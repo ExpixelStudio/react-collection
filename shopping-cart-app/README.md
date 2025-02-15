@@ -35,6 +35,8 @@ Redux
       //slice -> name,maintain initial state, actions
    - import {createSlice} from '@reduxjs/toolkit';
 
+useSelector and UseDispatch 
+https://redux.js.org/tutorials/fundamentals/part-5-ui-react#dispatching-actions-with-usedispatch
 
 <!-- Tailwind Css (Using Vite)   
 npm install tailwindcss @tailwindcss/vite
