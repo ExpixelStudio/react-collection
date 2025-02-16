@@ -2,10 +2,10 @@ import { Link, Links } from "react-router";
 
 export default function Header() {
   return (
-    <div>
+    <div className="m-6">
       <nav className="flex items-center justify-between h-20 max-w-6xl mx-auto">
         <Link to={"/"}>
-          <div className="ml-5">
+          <div>
             <h1 className="text-purple-950 font-bold text-xl sm:text-2xl md:text-3xl cursor-pointer tracking-wide">
               REACT REDUX SHOPPING CART
             </h1>
