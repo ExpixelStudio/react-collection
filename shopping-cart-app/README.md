@@ -1,13 +1,19 @@
 # Packages/Dependancies
 **This is just for documentation and review purposes of what i installed for future use/refrence.**
 
-**Tailwind CSS
+**Tailwind CSS**   
 npm install tailwindcss @tailwindcss/vite
 
-** Redux Toolkit
+**Redux Toolkit**   
 npm install @reduxjs/toolkit
 
-react-redux react-icons react-router-dom ldrs(loaders)https://uiball.com/ldrs/<!--react-loader-spinner(not yet supported by react 19)-->
+**Other npms**   
+npm install:   
+react-redux    
+react-icons    
+react-router-dom    
+ldrs - https://uiball.com/ldrs/
+<!-- react-loader-spinner(not yet supported by react 19) -->
 
 **React Router Dom**   
 <!-- npm install react-router-dom 
@@ -24,34 +30,28 @@ https://fakestoreapi.com/
 # Learned
 Things learned or personally implemented for the first time during this project.
 
-Redux
+**Redux**
 - Folder structure
-- store 
-  - index.js
-- slices
-  - cart-slice.js
-    - //createslice
-      //intialize initial state
-      //slice -> name,maintain initial state, actions
-   - import {createSlice} from '@reduxjs/toolkit';
+  - store 
+    - index.js
+  - slices
+    - cart-slice.js
+      - createslice
+      - intialize initial state
+      - slice -> name, maintain initial state, actions   
+  - import {createSlice} from '@reduxjs/toolkit';
+       
+- useSelector and UseDispatch   
+https://redux.js.org/tutorials/fundamentals/part-5-ui-react#dispatching-actions-with-usedispatch   
 
-useSelector and UseDispatch 
-https://redux.js.org/tutorials/fundamentals/part-5-ui-react#dispatching-actions-with-usedispatch
-
-<!-- Tailwind Css (Using Vite)   
-npm install tailwindcss @tailwindcss/vite
+**Tailwind Css (Using Vite)**   
+npm install tailwindcss @tailwindcss/vite   
 https://tailwindcss.com/docs/installation/using-vite -->
 
 # Recap Refrences  
-<!-- Example can delete
+   - Redux
+   - Tailwind CSS
    - API handling 
-   - React Router
--->
-
-
-
-
-
 
 # React + Vite
 
