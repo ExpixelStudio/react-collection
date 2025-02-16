@@ -8,6 +8,9 @@ export default function Home() {
   
    const [products, setProducts] = useState([]); 
    const [loading, setLoading] = useState(false);
+   const keys = products.map((item, index) => index);
+   console.log(keys);
+   
 
    useEffect(()=>{
       async function fetchListOfProducts(){
