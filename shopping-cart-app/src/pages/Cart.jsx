@@ -32,8 +32,8 @@ export default function Cart(){
             </div>
 
             
-               <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14 w-">
-                  <h1 className="font-bold text-lg text-red-800">Your Cart Summary</h1>
+               <div className="flex flex-col justify-center items-center p-5 space-y-5 mt-14 w-full max-w-md mx-auto text-center">
+                  <h1 className="font-bold text-lg text-red-600">Your Cart Summary</h1>
                   <p>
                      <span className="text-gray-800 font-bold">Total Items: </span>
                      <span>{cart.length}</span>

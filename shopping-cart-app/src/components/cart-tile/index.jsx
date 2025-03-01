@@ -12,20 +12,19 @@ export default function CartTile({cartItem}) {
 
   return (
      <>
-      <div className="flex items-center p-5 justify-between bg-purple-900 mt-2 mb-2 rounded-xl w-lg">
-        <div className="flex p-3"></div>
+      <div className="flex items-center p-5 justify-between bg-gray-100 shadow-lg shadow-purple-300/30 rounded-xl w-full max-w-4xl mx-auto space-x-4 mt-4">
         <img 
           src={cartItem?.image} 
           alt={cartItem?.title} 
-          className="h-28 rounded-lg"
+          className="h-32 w-32 object-contain rounded-lg"
         />
-        <div className="ml-10 self-start truncate space-y-5">
-          <h1 className="text-xl text-white font-bold">{cartItem.title}</h1>
-          <p className="text-white font-extrabold">{cartItem.price}</p>
+        <div className="ml-4 flex-1 flex-wrap space-y-5"> {/* flex-1 allows container to grow and shrink as needed. */}
+          <h1 className="text-xl text-gray-900 font-bold">{cartItem.title}</h1>
+          <p className="text-gray-800 font-extrabold">${cartItem.price}</p>
         </div>
         <div>
         <button onClick={handleRemoveFromCart} 
-          className="bg-purple-950 text-white border-2 rounded-lg font-bold p-4" 
+          className="bg-purple-950 text-white border-2 rounded-lg font-bold px-4 py-2 hover:bg-red-700 transition" 
           >
             Remove From Cart
         </button>
