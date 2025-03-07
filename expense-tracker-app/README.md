@@ -24,6 +24,7 @@ npm install tailwindcss @tailwindcss/vite
 https://tailwindcss.com/docs/installation/using-vite -->
 
 # Recap Refrences  
+  GlobalContext 
 <!-- Example can delete
    - API handling 
    - React Router
