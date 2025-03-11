@@ -7,7 +7,10 @@ const system = createSystem(defaultConfig, {
         heading: { value: `'Figtree', sans-serif` },
         body: { value: `'Figtree', sans-serif` },
       },
-      
+      colorMode: {
+        initialColorMode : 'light',
+        useSystemColorMode: true,
+      },
     },
   },
 }) 
@@ -15,4 +18,4 @@ const system = createSystem(defaultConfig, {
   useSystemColorMode : true
 })
  */
-export default theme;
+export default system;
