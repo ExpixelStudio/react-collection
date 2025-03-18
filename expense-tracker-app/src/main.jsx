@@ -10,12 +10,11 @@ import GlobalState from './context';
 import system from './theme';
 
 createRoot(document.getElementById('root')).render(
+  
   <GlobalState>
-    <Provider value={defaultSystem}>  
-      {/* <StrictMode> */}
-        <App />
-      {/* </StrictMode>, */}
+    <Provider>  
+      <App />
     </Provider>
-  </GlobalState>
+  </GlobalState> 
 
 );

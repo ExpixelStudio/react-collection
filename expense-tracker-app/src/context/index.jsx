@@ -6,6 +6,6 @@ export default function GlobalState({children}) {
   const [state, setState] = useState(""); // Define some initial state
 
   return (
-     <GlobalContext.Provider value={{state}}>{children}</GlobalContext.Provider>
+     <GlobalContext.Provider value={{state,setState}}>{children}</GlobalContext.Provider>
   );
 };

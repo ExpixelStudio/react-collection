@@ -5,6 +5,10 @@ npm i @chakra-ui/react @emotion/react
 https://chakra-ui.com/docs/get-started/installation
 
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons react-apexcharts
+
+Remove the unused packages: @emotion/styled and framer-motion. These packages are no longer required in Chakra UI.
+npm uninstall @emotion/styled framer-motion
+
 **React Router Dom**   
 <!-- npm install react-router-dom 
 
