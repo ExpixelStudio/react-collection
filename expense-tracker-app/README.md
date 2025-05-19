@@ -9,6 +9,12 @@ npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons 
 Remove the unused packages: @emotion/styled and framer-motion. These packages are no longer required in Chakra UI.
 npm uninstall @emotion/styled framer-motion
 
+import { Provider } from '@/components/ui/provider';
+according to chatgpt this is a place holder in the chakra UI documentation and not an antual import. ChakraProvider must still be used.
+ChatGPT : 'This is not from Chakra at all — it's a placeholder for your own custom wrapper. This Provider is assumed to be a file you created in your own src/components/ui/provider.jsx or similar.
+
+It's not part of Chakra UI — the docs just expect you to figure that out 😩.'
+
 **React Router Dom**   
 <!-- npm install react-router-dom 
 
@@ -29,6 +35,7 @@ https://tailwindcss.com/docs/installation/using-vite -->
 
 # Recap Refrences  
   GlobalContext 
+  Chakra UI
 <!-- Example can delete
    - API handling 
    - React Router

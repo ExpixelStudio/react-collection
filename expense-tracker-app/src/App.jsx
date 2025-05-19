@@ -1,6 +1,7 @@
 import { Box, Container, Flex } from '@chakra-ui/react'
 import Main from './components/main';
 
+
 /* import './App.css' */
 
 function App() {
