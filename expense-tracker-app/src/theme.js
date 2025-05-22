@@ -1,21 +1,11 @@
-import {createSystem, defaultConfig} from '@chakra-ui/react';
+import {extendTheme} from '@chakra-ui/react';
 
-const system = createSystem(defaultConfig, {
-  theme: {
-    tokens: {
-      fonts: {
-        heading: { value: `'Figtree', sans-serif` },
-        body: { value: `'Figtree', sans-serif` },
-      },
+const theme = extendTheme ({
       colorMode: {
         initialColorMode : 'light',
         useSystemColorMode: true,
       },
-    },
-  },
 }) 
-/*   initialColorMode : 'light',
-  useSystemColorMode : true
-})
- */
-export default system;
+
+
+export default theme;

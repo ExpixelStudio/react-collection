@@ -1,23 +1,16 @@
 /* import { StrictMode } from 'react' */
-import { createRoot } from 'react-dom/client'
-
-//import { Provider } from '@/components/ui/provider';  This is placeholder to replace *Provider* with a provider.
-import { defaultSystem , ChakraProvider } from "@chakra-ui/react"
-import { ThemeProvider } from "next-themes"
+import { createRoot } from "react-dom/client";
+//import { Provider } from '@/components/ui/provider';  //This is placeholder to replace *Provider* with a provider for v3*.
+import { ChakraProvider } from "@chakra-ui/react";
 /* import './index.css' */
-import App from './App';
+import App from "./App";
+import GlobalState from "./context";
+import theme from "./theme";
 
-import GlobalState from './context';
-import system from './theme';
-
-createRoot(document.getElementById('root')).render(
-  
+createRoot(document.getElementById("root")).render(
   <GlobalState>
-      
-      <ChakraProvider value={defaultSystem}>
-        <App />
-      </ChakraProvider>
-    
-  </GlobalState> 
-
+    <ChakraProvider value={theme}>
+      <App />
+    </ChakraProvider>
+  </GlobalState>
 );
