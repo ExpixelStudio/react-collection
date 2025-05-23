@@ -14,9 +14,9 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-export default function TransactionForm() {
+export default function TransactionForm({onClose, isOpen}) {
   return (
-    <Modal>
+    <Modal isOpen={isOpen} onClose={onClose}>
       <form>
         <ModalOverlay />
         <ModalContent>
@@ -51,7 +51,9 @@ export default function TransactionForm() {
             </RadioGroup>
           </ModalBody>
           <ModalFooter>
-            <Button mr={"4"}>Cancle</Button>
+            <Button onClick={onClose} mr={"4"}>
+              Cancle
+            </Button>
             <Button>Add</Button>
           </ModalFooter>
         </ModalContent>

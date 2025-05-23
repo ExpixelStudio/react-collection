@@ -28,6 +28,10 @@ npm install tailwindcss @tailwindcss/vite -->
 
 # Learned
 Things learned or personally implemented for the first time during this project.
+Chakra UI v2.8.2
+UseDisclosure.. isOpen can be use to conditonally render anything in the UI, The Modal specifically in this app. 
+passed the toggle state multiple components to render modal from add transaction component.
+
 
 <!-- Tailwind Css (Using Vite)   
 npm install tailwindcss @tailwindcss/vite

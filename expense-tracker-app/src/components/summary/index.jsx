@@ -82,7 +82,7 @@ export default function Summary({onClose, isOpen}) {
           <Heading>Chart</Heading>
         </Box>
       </Flex>
-      <TransactionForm />
+      <TransactionForm onClose={onClose} isOpen={isOpen}/>
     </Box>
   );
 }
