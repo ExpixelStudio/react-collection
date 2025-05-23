@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { GlobalContext } from "@/context";
 import {
   Modal,
   ModalOverlay,
@@ -14,10 +16,19 @@ import {
   Button,
 } from "@chakra-ui/react";
 
-export default function TransactionForm({onClose, isOpen}) {
+export default function TransactionForm({ onClose, isOpen }) {
+  const { formData, setFormData, value, setValue } = useContext(GlobalContext);
+
+  function handleFormChange(event) {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  }
+
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <form>
+      <form onSubmit={handleSubmit}>
         <ModalOverlay />
         <ModalContent>
           <ModalHeader>Add New Transaction</ModalHeader>
@@ -29,6 +40,7 @@ export default function TransactionForm({onClose, isOpen}) {
                 placeholder="Enter Transaction Description"
                 name="description"
                 type="text"
+                onChange={handleFormChange}
               />
             </FormControl>
 
@@ -38,14 +50,25 @@ export default function TransactionForm({onClose, isOpen}) {
                 placeholder="Enter Transaction Amount"
                 name="amount"
                 type="number"
+                onChange={handleFormChange}
               />
             </FormControl>
 
-            <RadioGroup mt="5">
-              <Radio value="income" colorScheme="blue" name="type">
+            <RadioGroup mt="5" value="value" onChange={setValue}>
+              <Radio
+                checked={formData.type === "income"}
+                value="income"
+                colorScheme="blue"
+                name="type"
+              >
                 Income
               </Radio>
-              <Radio value="expense" colorScheme="red" name="type">
+              <Radio
+                checked={formData.type === "income"}
+                value="expense"
+                colorScheme="red"
+                name="type"
+              >
                 Expense
               </Radio>
             </RadioGroup>
@@ -54,7 +77,7 @@ export default function TransactionForm({onClose, isOpen}) {
             <Button onClick={onClose} mr={"4"}>
               Cancle
             </Button>
-            <Button>Add</Button>
+            <Button onClick={onClose} type="submit">Add</Button>
           </ModalFooter>
         </ModalContent>
       </form>
