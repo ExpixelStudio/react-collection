@@ -6,6 +6,11 @@ https://chakra-ui.com/docs/get-started/installation
 
 npm i @chakra-ui/react @emotion/react @emotion/styled framer-motion react-icons react-apexcharts
 
+Used an older version of Chakra UI in the end. v2.8.2
+npm install @chakra-ui/react@2.8.2 @emotion/react@^11 @emotion/styled@^11 framer-motion@^7 apexcharts react-apexcharts --legacy-peer-deps
+Why '--legacy-peer-deps'? Using React19 but framer-motion@7.x (required by Chakra UI v2.8.2) only supports React 18 officially.
+--legacy peer-eps tells npm to ignore peer dependency mismatches.
+
 Remove the unused packages: @emotion/styled and framer-motion. These packages are no longer required in Chakra UI.
 npm uninstall @emotion/styled framer-motion
 
@@ -30,7 +35,7 @@ npm install tailwindcss @tailwindcss/vite -->
 Things learned or personally implemented for the first time during this project.
 Chakra UI v2.8.2
 UseDisclosure.. isOpen can be use to conditonally render anything in the UI, The Modal specifically in this app. 
-passed the toggle state multiple components to render modal from add transaction component.
+passed the toggle state through multiple components to render modal from add transaction component.
 
 
 <!-- Tailwind Css (Using Vite)   
