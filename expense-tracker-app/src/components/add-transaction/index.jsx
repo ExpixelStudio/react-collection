@@ -17,13 +17,19 @@ import {
 } from "@chakra-ui/react";
 
 export default function TransactionForm({ onClose, isOpen }) {
-  const { formData, setFormData, value, setValue } = useContext(GlobalContext);
+  const { formData, setFormData, value, setValue, handleFormSubmit } = useContext(GlobalContext);
 
   function handleFormChange(event) {
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
     });
+  }
+
+  function handleSubmit(event){
+    event.preventDefault();
+    handleFormSubmit(formData);
+
   }
 
   return (
@@ -54,20 +60,22 @@ export default function TransactionForm({ onClose, isOpen }) {
               />
             </FormControl>
 
-            <RadioGroup mt="5" value="value" onChange={setValue}>
+            <RadioGroup mt={"5"} value={value} onChange={setValue}>
               <Radio
                 checked={formData.type === "income"}
                 value="income"
                 colorScheme="blue"
                 name="type"
+                onChange={handleFormChange}
               >
                 Income
               </Radio>
               <Radio
-                checked={formData.type === "income"}
+                checked={formData.type === "expense"}
                 value="expense"
                 colorScheme="red"
                 name="type"
+                onChange={handleFormChange}
               >
                 Expense
               </Radio>
